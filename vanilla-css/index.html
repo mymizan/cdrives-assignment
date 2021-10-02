@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keyword" content="users, user list, list of of users">
+        <meta name="description" content="List of users.">
+        <meta name="author" content="Md Yakub Mizan">
+        <title>Users</title>
+
+        <!-- Should be populated dynamically -->
+        <link rel="canonical" href="#">
+
+        <!-- Load CSS -->
+        <link href="assets/css/app.css" rel="stylesheet" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <main>
+                <section>
+                    <div class='row'>
+                        <div class='users-title col'> 
+                            <h1> Users </h1>
+                        </div>
+                        <div class='users-filter col'>
+                            <!-- Search form -->
+                            <form action='#' method="POST">
+                                <label>Search</label>
+                                <input type='text' />
+    
+                                <label> Sort by</label>
+                                <select>
+                                    <option value='name'> Name </option>
+                                    <option value='username'> Username </option>
+                                    <option value='email'> Email </option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- User table section -->
+                <section>
+                    <div class='row'>
+                        <table>
+                            <!-- Task: We need to make the rows clikable. But according to HTML5, a tag can not
+                                be wrapped around a block level element that has links, here the email link.
+                                So we will use javascript to make it clickable. -->
+                            <tr>
+                                <td>
+                                    <img src='' />
+                                    <h3> M Yakub Mizan</h3>
+                                    <p> mymizan</p>
+                                </td>
+                                <td>
+                                    <a href='mailto:6322.ym@gmail.com'> 6322.ym@gmail.com </a>
+                                </td>
+                            </tr>
+
+                            <tr onclick=''>
+                                <td>
+                                    <img src='' />
+                                    <h3> M Yakub Mizan</h3>
+                                    <p> mymizan</p>
+                                </td>
+                                <td>
+                                    <a href='mailto:6322.ym@gmail.com'> 6322.ym@gmail.com </a>
+                                </td>
+                            </tr>
+
+                            <tr onclick=''>
+                                <td>
+                                    <img src='' />
+                                    <h3> M Yakub Mizan</h3>
+                                    <p> mymizan</p>
+                                </td>
+                                <td>
+                                    <a href='mailto:6322.ym@gmail.com'> 6322.ym@gmail.com </a>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                </section>
+            </main>
+            <footer class="pt-4 my-md-5 pt-md-5 border-top"></footer>
+        </div>
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>
