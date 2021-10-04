@@ -42,7 +42,7 @@ app.component( 'user-list', {
                                 <p class='m-0'> {{ user.username }}</p>
                             </td>
                             <td class='align-middle text-end'>
-                                <a class='pr-2' href='mailto:{{ user.email }}'> {{ user.email }} </a>
+                                <a class='pr-2' v-bind:href="'mailto:' + user.email"> {{ user.email }} </a>
                             </td>
                         </tr>
                     </table>
