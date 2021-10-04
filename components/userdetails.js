@@ -1,16 +1,16 @@
-app.component( 'userDetails', {
-    props: {
-        id: {
-            required: true
-        }
-    },
+app.component( 'user-details', {
+    // props: {
+    //     id: {
+    //         required: true
+    //     }
+    // },
 
     template:
     /*html*/
     `<section>
         <div class='row'>
             <div class='users-title col-12'> 
-                <h1 class='mt-5 mb-5'> <router-link to="/">Users</router-link> > {{ user_data.name }} </h1>
+                <h1 class='mt-5 mb-5'> <a href="/">Users</a> > {{ user_data.name }} </h1>
             </div>
         </div>
     </section>
@@ -59,7 +59,8 @@ app.component( 'userDetails', {
             user_data:{},
             address:{},
             company:{},
-            user_posts:[]
+            user_posts:[],
+            id: 1 // Hardcoded user ID 1
         }
     },
 
