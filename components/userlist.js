@@ -3,12 +3,12 @@ app.component( 'user-list', {
     /*html*/
     `<section class='mt-5'>
         <div class='row'>
-            <div class='users-title col-12 col-md-3'> 
-                <h1> Users </h1>
+            <div class='users-title col-12 col-md-3 mt-4'> 
+                <h1 class='fs-4'> Users </h1>
             </div>
             <div class='users-filter col-12 col-md-9'>
                 <!-- Search form -->
-                <form class='float-end'>
+                <form class='float-md-end float-lg-end float-xl-end float-xxl-end'>
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <label class='form-label'>Search</label>
@@ -35,16 +35,25 @@ app.component( 'user-list', {
             <div class='col-12 col-md-12'>
                 <div class='table-responsive'>
                     <table class='table table-striped table-hover table-bordered align-top mt-3'>
-                        <tr v-for="user in filteredUsers" @click='loadUserDetails(user.id)'>
-                            <td>
-                                <img class='pr-2' src='' />
-                                <h3 class='m-0'> {{ user.name }}</h3>
-                                <p class='m-0'> {{ user.username }}</p>
-                            </td>
-                            <td class='align-middle text-end'>
-                                <a class='pr-2' v-bind:href="'mailto:' + user.email"> {{ user.email }} </a>
-                            </td>
-                        </tr>
+                        <tbody>
+                            <tr v-for="user in filteredUsers" @click='loadUserDetails(user.id)'>
+                                <td>
+                                    <div class='row'>
+                                        <div class='col-2'>
+                                            <img class='pr-2 img-responsive align-center mt-xl-2 mt-md-2 mt-lg-2 mt-xxl-2 mt-3' width='30' height='30' src='assets/images/profile.png' />
+                                        </div>
+                                        <div class='col-10'>
+                                        <h3 class='m-0 fs-6 mt-1'> {{ user.name }}</h3>
+                                        <p class='m-0'> {{ user.username }}</p>
+                                        <a class='pr-2 d-md-none d-lg-none d-xl-none d-xxl-none' v-bind:href="'mailto:' + user.email"> {{ user.email }} </a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class='align-middle text-end d-none d-md-table-cell d-lg-table-cell d-xl-table-cell d-xxl-table-cell'>
+                                    <a class='pr-2' v-bind:href="'mailto:' + user.email"> {{ user.email }} </a>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
